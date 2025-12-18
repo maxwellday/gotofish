@@ -78,7 +78,7 @@
 		},
 		"menu": {
 			"overview": "概览",
-			"market": "邮件营销",
+			"market": "发件列表",
 			"task": "任务",
 			"template": "模板",
 			"sendApi": "发件API",

@@ -62,4 +62,5 @@ export default defineConfig({
 	shortcuts: {
 		'flex-center': 'flex items-center justify-center',
 	},
+	safelist: ['i-streamline-stickies-color:qr-code-duo'],
 })

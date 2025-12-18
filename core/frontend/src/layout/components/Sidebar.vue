@@ -13,7 +13,7 @@
 		<!-- 应用标志和名称 -->
 		<div class="app-logo" :class="{ collapse: isCollapse }">
 			<a href="/">
-				<img class="icon" src="@/assets/images/logo.png"></img>
+				<i class="i-streamline:reduced-inequalities-solid" style="width: 24px; height: 24px; color:#7a56c3;"></i>
 				<span v-show="!isCollapse" class="app-name">BillionMail</span>
 			</a>
 		</div>
@@ -103,16 +103,16 @@ const renderLabel = (name: string, title: string) => {
 }
 
 const iconMap: Record<string, VNodeChild> = {
-	overview: <i class="i-mdi-web"></i>,
-	market: <i class="i-mdi-email-fast-outline"></i>,
-	api: <i class="i-mdi-chart-line"></i>,
+	overview: <i class="i-streamline:ai-generate-variation-spark"></i>,
+	market: <i class="i-streamline:layers-2"></i>,
+	api: <i class="i-streamline:laptop-charging"></i>,
 	contacts: <i class="i-mdi-user-multiple-outline"></i>,
-	domain: <i class="i-mdi-web"></i>,
+	domain: <i class="i-streamline:earth-1"></i>,
 	mailbox: <i class="i-custom:mailbox"></i>,
-	smtp: <i class="i-custom:smtp"></i>,
+	smtp: <i class="i-streamline:cloud-share"></i>,
 	settings: <i class="i-mdi-settings-outline"></i>,
-	template: <i class="i-mdi-settings-outline"></i>,
-	logs: <i class="i-icon-park-outline:log"></i>,
+	template: <i class="i-streamline:insert-side"></i>,
+	logs: <i class="i-streamline:ai-prompt-spark"></i>,
 	logout: <i class="i-mdi-logout"></i>,
 }
 

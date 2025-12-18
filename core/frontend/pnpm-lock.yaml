@@ -93,6 +93,12 @@ importers:
       '@iconify-json/ri':
         specifier: ^1.2.5
         version: 1.2.5
+      '@iconify-json/streamline':
+        specifier: ^1.1.9
+        version: 1.2.5
+      '@iconify-json/streamline-stickies-color':
+        specifier: ^1.2.2
+        version: 1.2.2
       '@iconify/json':
         specifier: ^2.2.352
         version: 2.2.352
@@ -605,6 +611,12 @@ packages:
 
   '@iconify-json/ri@1.2.5':
     resolution: {integrity: sha512-kWGimOXMZrlYusjBKKXYOWcKhbOHusFsmrmRGmjS7rH0BpML5A9/fy8KHZqFOwZfC4M6amObQYbh8BqO5cMC3w==}
+
+  '@iconify-json/streamline-stickies-color@1.2.2':
+    resolution: {integrity: sha512-OisPU3Q/VMAHTtJbzRa2lmK8UN+n7D5US0txeL488yrEmoALvRerzIOS8zTNiojNDghJ2/6cp0eh5IK4ezukpA==}
+
+  '@iconify-json/streamline@1.2.5':
+    resolution: {integrity: sha512-u6l9BOJoIIPjjDXWl6D/hPDzeBk5WiaEHZ+U9SbkQ14N9hgotaYyIZVMfgF175CG1TTS06j8k15D3FM2OYaFIw==}
 
   '@iconify/json@2.2.352':
     resolution: {integrity: sha512-UtX9HPDYQDOoPtrb2m05mUOeFpVWWelfkNlamFEKyTIoB0Ma4fPJdqxfpYhylBrfvum6QVpAbq3EEcBr0TYkmg==}
@@ -3860,6 +3872,14 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/ri@1.2.5':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/streamline-stickies-color@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/streamline@1.2.5':
     dependencies:
       '@iconify/types': 2.0.0
 

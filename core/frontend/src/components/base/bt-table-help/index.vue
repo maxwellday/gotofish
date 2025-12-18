@@ -1,6 +1,7 @@
 <template>
 	<n-empty>
-		<template #default>
+		<span>暂无数据</span>
+		<!-- <template #default>
 			<div class="leading-22px text-13px text-desc text-center">
 				<i18n-t tag="span" scope="global" keypath="components.tableHelp.text1">
 					<template #issues>
@@ -19,7 +20,7 @@
 				<br />
 				<span>{{ $t('components.tableHelp.text2') }}</span>
 			</div>
-		</template>
+		</template> -->
 	</n-empty>
 </template>
 

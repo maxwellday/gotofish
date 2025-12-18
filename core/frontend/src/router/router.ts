@@ -6,7 +6,7 @@ const routesReflectList = [
 	'Overview',
 	'Email Marketing',
 	'template',
-	'Send API',
+	// 'Send API', //隐藏发件api菜单
 	'Contacts',
 	'MailDomain',
 	'MailBoxes',

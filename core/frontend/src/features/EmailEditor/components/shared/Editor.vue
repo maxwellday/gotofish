@@ -65,7 +65,7 @@ const getToolbarKeys = () => {
 	}
 }
 
-i18nChangeLanguage('en')
+i18nChangeLanguage('zh-CN')
 
 const showToolbar = ref(false)
 

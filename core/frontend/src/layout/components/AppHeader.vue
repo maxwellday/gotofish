@@ -29,9 +29,9 @@
 					<i class="icon i-mdi-user-outline"></i>
 				</n-button>
 			</n-dropdown>
-			<n-button type="primary" text class="text-14px" @click="handleGoVersion">
+			<!-- <n-button type="primary" text class="text-14px" @click="handleGoVersion">
 				{{ version }}
-			</n-button>
+			</n-button> -->
 		</div>
 	</n-layout-header>
 </template>
@@ -99,9 +99,9 @@ const handleUserAction = (key: string) => {
 	}
 }
 
-const handleGoVersion = () => {
-	window.open('https://github.com/aaPanel/BillionMail/releases')
-}
+// const handleGoVersion = () => {
+// 	window.open('https://github.com/aaPanel/BillionMail/releases')
+// }
 
 const getLangOptions = async () => {
 	langOptions.value = langList.value.map(item => {

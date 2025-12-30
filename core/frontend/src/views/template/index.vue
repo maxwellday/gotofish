@@ -1,6 +1,5 @@
 <template>
 	<div class="p-24px">
-		<div class="bt-title">{{ t('template.template') }}</div>
 		<bt-table-layout>
 			<template #toolsLeft>
 				<n-button type="primary" @click="handleAdd">

@@ -1,5 +1,4 @@
 <template>
-	<div class="bt-title mb-8px!">{{ title }}</div>
 	<n-tabs :value="activeTab" type="line" class="route-tabs" @update:value="handleUpdateTab">
 		<n-tab-pane v-for="tab in tabs" :key="tab.name" :name="tab.name" :tab="tab.title"> </n-tab-pane>
 	</n-tabs>
@@ -25,10 +24,6 @@ const tabs = ref<TabItem[]>([])
 
 const activeTab = computed(() => {
 	return String(route.name)
-})
-
-const title = computed(() => {
-	return t(`${get(route.matched[0], 'meta.titleKey')}`)
 })
 
 const handleUpdateTab = (name: string) => {

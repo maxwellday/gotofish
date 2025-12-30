@@ -4,10 +4,11 @@
 			<n-button class="icon-btn" :bordered="false" @click="handleCollapse">
 				<i class="icon" :class="isCollapse ? 'i-mdi-menu-close' : 'i-mdi-menu-open'"></i>
 			</n-button>
-			<n-button type="primary" text class="text-14px" @click="handleGoIssues">
-				{{ t('layout.header.submit') }}
-				<i class="i-mdi:arrow-right ml-1px"></i>
-			</n-button>
+			<n-breadcrumb class="header-breadcrumb">
+				<n-breadcrumb-item>
+					{{ currentMenuTitle }}
+				</n-breadcrumb-item>
+			</n-breadcrumb>
 		</div>
 
 		<div class="header-right">
@@ -50,6 +51,7 @@ defineProps({
 })
 
 const { t } = useI18n()
+const route = useRoute()
 
 const version = ref('--')
 
@@ -65,10 +67,6 @@ const handleCollapse = () => {
 	globalStore.setCollapse()
 }
 
-const handleGoIssues = () => {
-	window.open('https://github.com/aaPanel/BillionMail/issues')
-}
-
 const langOptions = ref<DropdownOption[]>([])
 
 const userOptions = ref<DropdownOption[]>([
@@ -77,6 +75,12 @@ const userOptions = ref<DropdownOption[]>([
 		key: 'logout',
 	},
 ])
+
+const currentMenuTitle = computed(() => {
+	const titleKey = String(route.meta?.titleKey || '')
+	const title = titleKey ? t(titleKey) : String(route.meta?.title || '')
+	return title || t('layout.header.submit')
+})
 
 const handleSetTheme = () => {
 	themeStore.setTheme(theme.value === 'dark' ? 'light' : 'dark')
@@ -148,6 +152,15 @@ onMounted(() => {
 	font-size: 14px;
 	text-align: center;
 	font-weight: 600;
+}
+
+.header-breadcrumb {
+	--n-item-text-color: var(--color-text-4);
+	--n-item-text-color-hover: var(--color-text-4);
+	--n-item-text-color-pressed: var(--color-text-4);
+	--n-item-text-color-active: var(--color-text-4);
+	--n-item-separator-color: var(--color-text-4);
+	font-size: 14px;
 }
 
 .icon-btn {

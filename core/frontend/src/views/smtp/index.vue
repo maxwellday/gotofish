@@ -1,6 +1,5 @@
 <template>
 	<div class="p-24px">
-		<div class="bt-title">{{ $t('smtp.title') }}</div>
 		<div class="flex gap-12px mb-16px">
 			<n-dropdown
 				placement="bottom-start"

@@ -1,6 +1,5 @@
 <template>
 	<div class="p-24px">
-		<div class="bt-title">{{ $t('api.title') }}</div>
 		<n-card class="mb-24px" :content-style="{ padding: '16px 24px' }">
 			<div class="flex flex-wrap items-center gap-16px">
 				<div class="flex items-center whitespace-pre">

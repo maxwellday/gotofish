@@ -62,7 +62,7 @@
 <script lang="ts" setup>
 import { useUserStore } from '@/store'
 import { isObject } from '@/utils'
-import { getValidateCode, login } from '@/api/modules/user'
+import { getValidateCode, login, warmupSession } from '@/api/modules/user'
 
 const { t } = useI18n()
 
@@ -154,7 +154,19 @@ const handleLogin = async () => {
 	}
 }
 
-getCode()
+const initLogin = async () => {
+	try {
+		await warmupSession() // 整个项目联调完需要删除
+	} catch {
+		// warmup failure shouldn't block captcha fetch
+	} finally {
+		getCode()
+	}
+}
+
+onMounted(() => {
+	initLogin()
+})
 </script>
 
 <style lang="scss" scoped>

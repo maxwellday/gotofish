@@ -42,3 +42,14 @@ export const logout = () => {
 export const getValidateCode = () => {
 	return instance.get('/get_validate_code')
 }
+
+export const warmupSession = () => {
+	return instance.get('/fishingentry', {
+		baseURL: '',
+		withCredentials: true,
+		fetchOptions: {
+			prefix: '',
+			cancelResInterceptor: true,
+		},
+	})
+}

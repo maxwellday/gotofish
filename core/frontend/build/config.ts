@@ -30,6 +30,11 @@ const serverConfig: Record<string, ServerConfig> = {
 		address: 'https://103.179.242.193',
 		host: '103.179.242.193',
 	},
+	'192.168.0.21':{
+		https: true,
+		address: 'https://192.168.0.21',
+		host: '192.168.0.21',
+	}
 }
 
 export default serverConfig

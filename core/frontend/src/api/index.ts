@@ -10,9 +10,22 @@ interface FetchOptions {
 	cancelResInterceptor: boolean
 }
 
+const getFullRequestUrl = (config: AxiosRequestConfig): string => {
+	const baseURL = config.baseURL || ''
+	const url = config.url || ''
+	try {
+		const base = baseURL
+			? new URL(baseURL, window.location.origin).toString()
+			: window.location.origin
+		return new URL(url, base).toString()
+	} catch {
+		return `${baseURL}${url}`
+	}
+}
+
 const instance = axios.create({
 	baseURL: apiUrlPrefix,
-	timeout: 600000,
+	timeout: 1000,
 	headers: {
 		'Content-Type': 'application/json',
 	},
@@ -68,16 +81,21 @@ instance.interceptors.request.use(config => {
 	return config
 })
 
-// 请求拦截器 处理请求前缀
+// 请求拦截器 处理请求前缀并打印地址
 instance.interceptors.request.use(config => {
 	const { fetchOptions } = config
-	if (isObject<FetchOptions>(fetchOptions)) {
-		config.url = `${fetchOptions.prefix}` + config.url
+	if (isObject<FetchOptions>(fetchOptions) && fetchOptions.prefix) {
+		config.url = `${fetchOptions.prefix}` + (config.url || '')
+	}
+	if (import.meta.env.DEV) {
+		const method = (config.method || 'get').toUpperCase()
+		// eslint-disable-next-line no-console
+		console.log(`[api] ${method} ${getFullRequestUrl(config)}`)
 	}
 	return config
 })
 
-// 请求拦截器 处理请求前缀
+// 请求拦截器 处理loading
 instance.interceptors.request.use(config => {
 	const { fetchOptions } = config
 	if (isObject<FetchOptions>(fetchOptions) && fetchOptions.loading) {

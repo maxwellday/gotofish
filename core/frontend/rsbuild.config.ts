@@ -72,6 +72,11 @@ export default defineConfig({
 	},
 	server: {
 		proxy: {
+			'/fishingentry': {
+				target: server.address,
+				secure: false,
+				changeOrigin: true,
+			},
 			'/api': {
 				target: server.address,
 				secure: false,

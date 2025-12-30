@@ -24,14 +24,5 @@
 	</n-empty>
 </template>
 
-<script lang="ts" setup>
-const handleGoIssues = () => {
-	window.open('https://github.com/aaPanel/BillionMail/issues')
-}
-
-const handleGoStar = () => {
-	window.open('https://github.com/aaPanel/BillionMail')
-}
-</script>
 
 <style lang="scss" scoped></style>

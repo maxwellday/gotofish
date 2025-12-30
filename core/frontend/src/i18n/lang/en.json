@@ -99,7 +99,7 @@
 		}
 	},
 	"login": {
-		"title": "BillionMail",
+		"title": "gotofish",
 		"form": {
 			"usernamePlaceholder": "Username",
 			"passwordPlaceholder": "Password",

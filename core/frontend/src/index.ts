@@ -3,7 +3,7 @@ import i18n from '@/i18n'
 import pinia from '@/store'
 import router from '@/router'
 import App from '@/App.vue'
-
+//test
 import '@unocss/reset/normalize.css'
 import 'uno.css'
 import '@/styles/index.scss'
